@@ -1,7 +1,7 @@
 #  PIN: Positional Insert unlocks object localisation abilities in VLMs
 
-[![ProjectPage](https://quva-lab.github.io/PIN/)
-[![Paper]()
+[Project Page](https://quva-lab.github.io/PIN/)
+[ArXiv]()
 
 
 This is the official code repository. For a paper summary, check out our [project page](https://quva-lab.github.io/PIN/)!
