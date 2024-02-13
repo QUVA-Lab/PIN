@@ -22,8 +22,8 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="PIN Project Page">
-  <meta property="og:title" content="PIN: Positional Insert unlocks object localisation abilities in VLMs"/>
-  <meta property="og:description" content="Project page of 'PIN: Positional Insert unlocks object localisation abilities in VLMs'"/>
+  <meta property="og:title" content="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs"/>
+  <meta property="og:description" content="Project page of 'PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs'"/>
   <meta property="og:url" content="https://quva-lab.github.io/PIN/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/images/first.png" />
@@ -31,17 +31,17 @@
   <meta property="og:image:height" content="600"/>
 
 
-  <meta name="twitter:title" content="PIN: Positional Insert unlocks object localisation abilities in VLMs">
+  <meta name="twitter:title" content="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs">
   <meta name="twitter:description" content="">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/first.png">
-  <meta name="twitter:card" content="Positional Insert unlocks object localisation abilities in VLMs.">
+  <meta name="twitter:card" content="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs.">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="VLMs, object localisation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>PIN: Positional Insert unlocks object localisation abilities in VLMs</title>
+  <title>PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -65,12 +65,15 @@
 
 
   <section class="hero">
-    <div class="hero-body" style="background-color: #fff6e6;">
+    <!-- <div class="hero-body" style="background-color: #bdbaba;"> -->
+        <!-- <div class="hero-body" style="background-image: url('static/images/background.avif'); background-size: cover; background-repeat: no-repeat; background-position: center center;"> -->
+            <div class="hero-body" style="background-image: url(static/images/background.avif);">
+
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-                <img src="static/images/pin2.png" alt="PIN Image" style="width:40px;height:40px;"> PIN: Positional Insert unlocks object localisation abilities in VLMs</h1>
+                <img src="static/images/pin2.png" alt="PIN Image" style="width:40px;height:40px;"> PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -89,7 +92,7 @@
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">QUVA Lab, University of Amsterdam<br>
-                <!-- <span style="font-size: smaller;">*equal last author</span> -->
+                <span style="font-size: small;">*equal last author</span>
             </span>
             </div>
 
@@ -196,13 +199,13 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-                Vision-Language Models (VLMs), such as Flamingo and GPT-4V, have shown immense potential by integrating large language models with vision systems. Nevertheless, these models face challenges in the fundamental computer vision task of object localisation, due to their training on multimodal data containing mostly captions without explicit spatial grounding. While it is possible to construct custom, supervised training pipelines with bounding box annotations that integrate with VLMs, these result in specialized and hard-to-scale models. In this paper, we aim to explore the limits of caption-based VLMs and instead propose to tackle the challenge in a simpler manner by i) keeping the weights of a caption-based VLM frozen and ii) not utilizing any supervised detection data. 
+                Vision-Language Models (VLMs), such as Flamingo and GPT-4V, have shown immense potential by integrating large language models with vision systems. Nevertheless, these models face challenges in the fundamental computer vision task of object localisation, due to their training on multimodal data containing mostly captions without explicit spatial grounding. While it is possible to construct custom, supervised training pipelines with bounding box annotations that integrate with VLMs, these result in specialized and hard-to-scale models. <strong>In this paper, we aim to explore the limits of caption-based VLMs and instead propose to tackle the challenge in a simpler manner by i) keeping the weights of a caption-based VLM frozen and ii) not utilizing any supervised detection data. </strong>
                 To this end, we introduce an input-agnostic Positional Insert (PIN), a learnable spatial prompt, containing a minimal set of parameters that are slid inside the frozen VLM, unlocking object localisation capabilities. Our PIN module is trained with a simple next-token prediction task on synthetic data without requiring the introduction of new output heads. Our experiments demonstrate strong zero-shot localisation performances on a variety of images, including Pascal VOC, COCO, LVIS, and diverse images like paintings or cartoons. 
             </p>
             <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/first_page.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 500px; padding-top: 10px;"/>
+                <img src="static/images/first_page.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 500px; padding-top: 10px;"/>
                 <p style="width: 100%; max-width: 600px; margin: auto;">
-                We learn a single Positional Insert (PIN) for unlocking zero-shot object localisation abilities in a frozen Vision Language Model (VLM) without adding any additional heads or requiring supervised datasets.</i>
+                <i> We learn a single Positional Insert (PIN) for unlocking zero-shot object localisation abilities in a frozen Vision Language Model (VLM) without adding any additional heads or requiring supervised datasets.</i>
                 </p>
                 &nbsp;
               </div>
@@ -216,35 +219,32 @@
   <!-- Start first section -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
+      <div class="columns">
         <div class="column">
-          <h2 class="title is-3">Limitations in caption-based VLMs</h2>
-          <div class="content has-text-justified">
+          <h2 class="title is-3" style="text-align: center;">Limitations in caption-based VLMs</h2>
+          <div class="content">
             <p>
-                We assess the object localisation capabilities of caption-based VLMs by analysing their textual responses given various prompts. We examine models such as GPT-4V, BLIP-2, Flamingo (using OpenFlamingo), and Fromage. For that, we use prompts aimed at generating a bounding box response from these VLMs.
-                We find that among the evaluated VLMs, only GPT-4V successfully returns bounding boxes that roughly localise the intended object. Other VLMs are unable to provide any location information even in text form and instead are ``chatty'' (FROMAGe, OpenFlamingo) or return the input or provide no output (BLIP-2). 
-                </p>
-            <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/study.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <!-- <p style="width: 100%; max-width: 1000px; margin: auto;"> -->
-                  <!-- <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i> -->
-                <!-- </p> -->
-              </div>
-            
-            <p>
-            We also quantitatively evaluate the in-context learning abilities for localisation of the OpenFlamingo model and broaden our study by examining a wider variety of prompts, specifically including those that do not require generating a bounding box, and by analyzing a larger number of samples. 
-            Yet, the conclusion remains the same as with the exemplary results here that caption-based VLMs are unable to localise objects in a given image via textual responses. 
+              We assess the object localisation capabilities of caption-based VLMs by analysing their textual responses given various prompts. We examine models such as GPT-4V, BLIP-2, Flamingo (using OpenFlamingo), and Fromage. 
+              For that, we use prompts aimed at generating a bounding box or text localisation response from these VLMs. Extended analysis can be found in the supplmental.
             </p>
+            <!-- Removed is-centered and has-text-centered classes for the image container -->
+            <div class="columns is-centered has-text-centered" style="display: block;">
+                <img src="static/images/study.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 20px"/>
+              <p style="width: 100%; max-width: 1000px; margin: auto;">
+                <i> Examples from our analysis on localisation abilities of existing caption-based VLMs.</i>
+              </p>
+            </div>
             <p> 
-            One recent stream of research (VisionLLM, UniTab, CogVLM, OFA, MiniGPTv2, mPLUG-Owl, GLIPv2, UnifiedIO, UniTab, Shikra) focuses on developing unified expert Vision Language Models (VLMs) capable of performing a variety of tasks, including localisation, with a universal architecture. 
-            Although these models show impressive results across different tasks, their success largely depends on the availability of extensive task-specific, supervised data. Furthermore, many require a large amount of compute for training.
-            The setting we tackle in this paper is different. Our goal is to efficiently enable the localisation capabilities of VLMs while keeping their parameters untouched and without the need for localisation supervised datasets.
+              We find that among the evaluated VLMs, only GPT-4V successfully returns bounding boxes that roughly localise the intended object. Other<strong> VLMs are unable to provide any location information</strong> even in text form and instead are <strong>"chatty"</strong> (FROMAGe, OpenFlamingo) or return the input or provide no output (BLIP-2). 
+              One recent stream of research (VisionLLM, UniTab, CogVLM, OFA, MiniGPTv2, mPLUG-Owl, GLIPv2, UnifiedIO, UniTab, Shikra) focuses on developing unified expert VLMs capable of performing a variety of tasks, including localisation, with a universal architecture. Although these models show impressive results across different tasks, their 
+              <strong>success largely depends on the availability of extensive task-specific, supervised data</strong>. Furthermore, they typically require a <strong>large amount of compute</strong> for training. The setting we tackle in this paper is different. Our goal is to efficiently enable the localisation capabilities of VLMs while keeping their parameters untouched and without the need for localisation supervised datasets.
             </p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  
   <!-- End first section -->
 
   <!-- Start second section -->
@@ -258,31 +258,33 @@
                 We tackle the shortcomings of caption-based Vision-Language Models (VLMs) in their ability to localise objects within images. To this end, we introduce a simple yet effective Positional Insert (PIN), designed to enhance the VLMs' object localisation capabilities without altering their existing parameters or the use of annotated data.
               &nbsp;
             </p>
-            <p>
-            Vision-Language Models (VLMs) accept inputs composed of visual data such as images \( I \) alongside a textual input \( T \). The visual component \( I \) is processed by a vision encoder \( \phi_V \) producing a feature vector \( x_v \). Similarly, the textual information \( T \) is tokenized, yielding textual embeddings \( x_{\text{t}} \). The visual features \( x_v\) go through a fusion network \( F \) before being processed with the textual features \( x_t \) to produce a response text \( t_r {=} \text{LLM}(F(x_v), x_t) \) by the Large Language Model.
-            </p>
+            <!-- <p> -->
+            <!-- Vision-Language Models (VLMs) accept inputs composed of visual data such as images \( I \) alongside a textual input \( T \). The visual component \( I \) is processed by a vision encoder \( \phi_V \) producing a feature vector \( x_v \). Similarly, the textual information \( T \) is tokenized, yielding textual embeddings \( x_{\text{t}} \). The visual features \( x_v\) go through a fusion network \( F \) before being processed with the textual features \( x_t \) to produce a response text \( t_r {=} \text{LLM}(F(x_v), x_t) \) by the Large Language Model. -->
+            <!-- </p> -->
             <div class="columns is-centered has-text-centered" style="display: block;">
-              <img src="static/images/method.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px;"/>
-              <p style="width: 100%; max-width: 600px; margin: auto;">
-                <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+              <img src="static/images/method.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px;"/>
+              <p style="width: 100%; max-width: 1000px; margin: auto;">
+                <i>Overview of our method: PIN is a spatial learnable prompt \( \pi \) which is added to the vision enconding in the forward pass of the VLM.
+                    We train PIN with the self-generated supervision signal from our synthetic training data generation.
               </p>
               &nbsp;
             </div>
 
             <p>
-                PIN is a learnable an input-agnostic spatial feature vector and is inserted directly after the vision encoder \( \phi_V \). To instill spatial awareness into our PIN module, we start with fixed positional embeddings of dimension \( d \) employing sinusoidal functions. Each of the spatial sinusoidal vectors is further refined by a
-                learnable, shallow feed-forward neural network \( \psi \) parametrized by \( \theta \), resulting in our PIN \(\pi {=} \psi(S) \) with the output dimension matching the ones from the vision encoder \( x_v \). This learned embedding is then added to the output from the vision encoder \( x_v \), resulting in the enriched visual feature representation
-                \( x_v^\star = x_v + \pi. \) From there the standard forward pass of the VLM is followed.
+                <strong>PIN is a learnable an input-agnostic spatial feature vector</strong> and is inserted directly after the vision encoder \( \phi_V \). To instill spatial awareness into our PIN module, we start with fixed positional embeddings employing sinusoidal functions. Each of the sinusoidal vectors is further refined by a
+                shallow feed-forward neural network \( \psi \), resulting in our PIN \(\pi {=} \psi(S) \). This learned embedding is then added to the output from the vision encoder \( x_v \), resulting in the enriched visual feature representation
+                \( x_v^\star = x_v + \pi. \) From there the standard forward pass of the VLM is followed. PIN's parameters are optimized via simple next token prediction by using the bounding box location of a inquired object contained in the text prompt.
             </p>
             <p>
-                We do not rely on manually labeled data to unlock the positional information in the VLM. Instead, we generate our own synthetic data following XPaste and by utilizing Stable Diffusion to synthesize objects from the LVIS category list. 
-                Note, since the vision encoder's weights remain unchanged, it is unlikely to overfit to any pasting artifacts. The composition function \( C \) overlays objects on randomly picked locations while considering the various constraints. This process creates a self-generated supervision signal that is subsequently exploited in the training of PIN. 
+                We do <strong>not rely on manually labeled data</strong> to unlock the positional information in the VLM. Instead, we generate our own synthetic data following XPaste and by utilizing Stable Diffusion to synthesize objects from the LVIS category list. 
+                Note, since the vision encoder's weights remain unchanged, it is unlikely to overfit to any pasting artifacts. The composition function \( C \) overlays objects on randomly picked locations while considering the various constraints. 
+                This process creates a <strong>self-generated supervision signal</strong> that is subsequently exploited in the training of PIN. 
 
             </p>
             <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/train.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px;"/>
+                <img src="static/images/train.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px;"/>
                 <p style="width: 100%; max-width: 600px; margin: auto;">
-                  <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+                  <i>Sample images from our synthetic training data.</i>
                 </p>
                 &nbsp;
               </div>
@@ -303,45 +305,53 @@
           <h2 class="title is-3">Results</h2>
           <div class="content has-text-justified">
             <p>
-                We analyse blabla
+                PIN is applied on the Flamingo (using OpenFlamingo) and BLIP-2 VLMs. For COCO, PVOC, and LVIS, localisation is based on ground truth object names. <strong>All results are zero-shot</strong> as overlapping categories with the synthetic training data are removed. We also evaluate PIN for visual grounding on RefCOCO.
             </p>
             <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/ade (1).jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                  <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+                <img src="static/images/ade (1).jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                    <i>
+                    Localisation on a wide range of image types ranging from paintings, and comics to unique scenarios. Despite the varying image content, the enhanced OpenFlamingo VLM with PIN shows strong localisation abilities.
+                  </i>
                 </p>
               </div>
             
               <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/coco_pvoc (1).jpg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                  <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+                <img src="static/images/coco_pvoc (1).jpg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                  <i>
+                    Object localisation results on PVOC and COCO. The PIN module unlocks spatial localisation in the OpenFlamingo VLM.     
+                </i>
                 </p>
               </div>
               <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/BLIP.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                  <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+                <img src="static/images/BLIP.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                    <i>
+                    Object localisation results with BLIP-2 on 224\( \times \)224, BLIP-2 (224), image resolution and 364\( \times \)364, BLIP-2 (364), on PVOC. The PIN trained with the higher image resolution BLIP-2 version is able to predict more accurate bounding boxes.
+                  </i>
                 </p>
               </div>
               <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/tab.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                Comparison on object localisation on a subset of PVOC, COCO and LVIS with up to 3 objects per image, yielding 3,582, 2,062 and 6,016 test images respectively. PIN improves on the OpenFlamingo in-context and PEFT baselines for both the
+                <img src="static/images/tab.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                    Comparison on object localisation on a subset of PVOC, COCO and LVIS with up to 3 objects per image. PIN improves on the OpenFlamingo in-context and PEFT baselines for both the
                 OpenFlamingo and BLIP-2 VLM.
                 </p>
               </div>
 
               <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/refcoco.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                  <i><b>BISCUIT</b> identifies causal variables from images by learning to encode low-level action information to binary interaction variables.</i>
+                <img src="static/images/refcoco (1).jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 1000px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                    <i>
+                    Zero-shot visual grounding results on RefCOCO of PIN with the OpenFlamingo VLM. The adapted VLM struggles with more complex scenarios(B and C), yet, it effectively handles simpler cases (F, G, H, J).
+                  </i>
                 </p>
               </div>
               <div class="columns is-centered has-text-centered" style="display: block;">
-                <img src="static/images/refcoco_tab.jpeg" alt="PIN: Positional Insert unlocks object localisation abilities in VLMs" style="width: 100%; max-width: 500px; padding-top: 10px"/>
-                <p style="width: 100%; max-width: 1000px; margin: auto;">
-                Evaluation on RefCOCO Test-A. PIN shows decent grounding abilities without using any annotated training data, outperforming the in-context learning Flamingo baseline. Extending our synthetic dataset with positional referrals improves performance considerably.
+                <img src="static/images/refcoco_tab.jpeg" alt="PIN: Positional Insert Unlocks Object Localisation Abilities in VLMs" style="width: 100%; max-width: 400px; padding-top: 10px"/>
+                <p style="width: 100%; max-width: 1000px; margin: auto; padding-bottom: 30px;">
+                    Evaluation on RefCOCO Test-A. PIN shows decent grounding abilities without using any annotated training data, outperforming the in-context learning Flamingo baseline. Extending our synthetic dataset with positional referrals improves performance.
                 </p>
               </div>
           </div>
@@ -397,7 +407,7 @@
         <div class="publication-links">
           <!-- Arxiv PDF link -->
           <span class="link-block">
-            <a href="https://arxiv.org/abs/2306.09643" target="_blank"
+            <a href="" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
               <i class="fas fa-file-pdf"></i>
@@ -430,7 +440,7 @@
 
           <!-- Github link -->
           <span class="link-block">
-            <a href="https://github.com/phlippe/BISCUIT" target="_blank"
+            <a href="https://github.com/QUVA-Lab/PIN/" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
               <i class="fab fa-github"></i>
@@ -468,14 +478,14 @@
 
 
   <!--BibTex citation -->
-  <section class="section" id="BibTeX" style="background-color: #fafafa;">
+  <!-- <section class="section" id="BibTeX" style="background-color: #fafafa;">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre style="background-color: #f5f5f5;"><code>
 
       </code></pre>
     </div>
-  </section>
+  </section> -->
   <!--End BibTex citation -->
 
 
