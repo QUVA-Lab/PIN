@@ -30,7 +30,7 @@ after adding the disk path to each dataset.
 
 ## Training
 
-First we need to set up the training data. For background images we use the [BG20k](https://github.com/JizhiziLi/animal-matting) dataset, please download from their repo and save on disk. Synthetic images are generated following [XPaste](https://github.com/yoctta/XPaste). We create dataset with 100 samples, after cleaning around 60k objects remained. We will release our generated synthetic images soon and share a link here. 
+First we need to set up the training data. For background images we use the [BG20k](https://github.com/JizhiziLi/animal-matting) dataset, please download from their repo and save on disk. Please copy the lvis category list from [here](https://www.lvisdataset.org/dataset) to the utils folder. Synthetic images are generated following [XPaste](https://github.com/yoctta/XPaste). We create a synthetic dataset with 100 samples, after cleaning around 60k objects remained. We will release our generated synthetic images soon and share a link here. 
 
 After setting up the datasets, you can start a training run for PIN using 
 ```
